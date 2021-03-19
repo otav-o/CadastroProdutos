@@ -1,0 +1,12 @@
+.footer {
+    position: fixed;
+    bottom: 0; /* referência para o fixed */
+
+    display: flex;
+    justify-content: flex-end; /* alinhamento do eixo principal*/
+}
+
+.footer > span {
+    font-size: 1.1rem;
+    font-weight: 300;
+}
