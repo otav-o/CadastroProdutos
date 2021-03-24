@@ -26,4 +26,8 @@ export class ProductService {
   create (product: Product): Observable<Product> {
       return this.http.post<Product>(this.baseUrl, product); // post retorna um Observable
   }
+
+  read(): Observable<Product[]> {
+	  return this.http.get<Product[]>(this.baseUrl);
+  }
 }
