@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
+import { HeaderService } from 'src/app/components/template/header/header.service';
 
 @Component({
   selector: 'app-product-crud',
@@ -8,7 +9,13 @@ import {Router} from '@angular/router';
 })
 export class ProductCrudComponent implements OnInit {
 
-  constructor(private router: Router) { } // router já será instanciado quando for usada a tag 'app-product-crud'. Importante ter o tipo para ocorrer a injeção
+  constructor(private router: Router, private headerService: HeaderService) { 
+    headerService.headerData = {
+      title: 'Cadastro de Produtos',
+      icon: 'storefront',
+      routeUrl: '/products'
+    }
+  } // router já será instanciado quando for usada a tag 'app-product-crud'. Importante ter o tipo para ocorrer a injeção
 
   ngOnInit(): void {
   }
